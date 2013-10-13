@@ -55,4 +55,12 @@ public class Duple <F, S> {
         result = 31 * result + (second != null ? second.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Duple{" +
+                "first=" + first +
+                ", second=" + second +
+                '}';
+    }
 }
