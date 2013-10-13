@@ -35,4 +35,24 @@ public class Duple <F, S> {
     public void setSecond(S second) {
         this.second = second;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Duple duple = (Duple) o;
+
+        if (first != null ? !first.equals(duple.first) : duple.first != null) return false;
+        if (second != null ? !second.equals(duple.second) : duple.second != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = first != null ? first.hashCode() : 0;
+        result = 31 * result + (second != null ? second.hashCode() : 0);
+        return result;
+    }
 }
