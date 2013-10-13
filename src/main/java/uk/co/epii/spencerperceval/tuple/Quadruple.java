@@ -81,4 +81,14 @@ public class Quadruple<F, S, T, G> {
         result = 31 * result + (fourth != null ? fourth.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Quadruple{" +
+                "first=" + first +
+                ", second=" + second +
+                ", third=" + third +
+                ", fourth=" + fourth +
+                '}';
+    }
 }
