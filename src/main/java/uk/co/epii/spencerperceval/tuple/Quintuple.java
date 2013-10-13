@@ -94,4 +94,15 @@ public class Quintuple<F, S, T, G, H> {
         result = 31 * result + (fifth != null ? fifth.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Quintuple{" +
+                "first=" + first +
+                ", second=" + second +
+                ", third=" + third +
+                ", fourth=" + fourth +
+                ", fifth=" + fifth +
+                '}';
+    }
 }
