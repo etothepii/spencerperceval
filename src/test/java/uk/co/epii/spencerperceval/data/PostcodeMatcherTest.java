@@ -18,9 +18,6 @@ public class PostcodeMatcherTest {
     @BeforeClass
     public static void createInstance() {
         instance = new PostcodeMatcher();
-        instance.setPrefixPattern("[A-Z]+[0-9]+[A-Z]?");
-        instance.setSuffixPattern("[0-9]+[A-Z]{2}");
-        instance.setSpacesRequired(false);
         instance.init();
     }
 

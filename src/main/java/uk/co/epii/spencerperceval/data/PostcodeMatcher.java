@@ -10,11 +10,16 @@ import java.util.regex.Pattern;
  */
 public class PostcodeMatcher {
 
-    private String prefixPattern;
-    private String suffixPattern;
-    private boolean spacesRequired;
+    private String prefixPattern = "[A-Z]+[0-9]+[A-Z]?";
+    private String suffixPattern = "[0-9][A-Z]{2}";
+    private String standardizedPattern = "%s %s";
+    private boolean spacesRequired = false;
     private Pattern postcodeMatcher;
     private Pattern postcodeFinder;
+
+    public void setStandardizedPattern(String standardizedPattern) {
+        this.standardizedPattern = standardizedPattern;
+    }
 
     public void setPrefixPattern(String prefixPattern) {
         this.prefixPattern = prefixPattern;
@@ -39,11 +44,19 @@ public class PostcodeMatcher {
         return postcodeFinder.matcher(line).find();
     }
 
+    public String extractPostcode(String line) {
+        Matcher matcher = postcodeFinder.matcher(line);
+        if (matcher.find()) {
+            return standardize(matcher.group(0));
+        }
+        return null;
+    }
+
     public String standardize(String postcode) {
         Matcher matcher = postcodeMatcher.matcher(postcode);
         if (!matcher.find()) {
             throw new IllegalArgumentException(String.format("%s is not a valid postcode", postcode));
         }
-        return String.format("%s %s", matcher.group(1), matcher.group(2));
+        return String.format(standardizedPattern, matcher.group(1), matcher.group(2));
     }
 }
