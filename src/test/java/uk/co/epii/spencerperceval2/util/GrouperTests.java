@@ -17,7 +17,7 @@ import static junit.framework.Assert.assertEquals;
 public class GrouperTests {
 
     @Test
-    public void groupTest() {
+    public void groupTest1() {
         Grouper<DummyGroupable> grouper = new Grouper<DummyGroupable>();
         List<Group<DummyGroupable>> groups = grouper.group(Arrays.asList(new DummyGroupable[] {
                 new DummyGroupable(5),
