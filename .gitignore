@@ -66,3 +66,6 @@ public_build
 .project
 .settings
 target
+
+#Shade PLugin
+dependency-reduced-pom.xml

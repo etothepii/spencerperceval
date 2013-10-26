@@ -39,7 +39,7 @@ public class Grouper<T extends Groupable<T>> {
         for (Group<T> group : groups) {
             if (groupRelation.equivalent(group.getCommon(), t)) {
                 group.add(t);
-                break;
+                return;
             }
         }
         groups.add(new Group<T>(t));
