@@ -1,9 +1,7 @@
-package uk.co.epii.spencerPerceval.util;
+package uk.co.epii.spencerperceval.util;
 
 import edu.emory.mathcs.backport.java.util.Arrays;
 import org.junit.Test;
-import uk.co.epii.spencerperceval.util.Group;
-import uk.co.epii.spencerperceval.util.Grouper;
 
 import java.util.List;
 
@@ -14,7 +12,7 @@ import static junit.framework.Assert.assertEquals;
  * Date: 26/10/2013
  * Time: 12:28
  */
-public class GrouperTests {
+public class GrouperTest {
 
     @Test
     public void groupTest1() {

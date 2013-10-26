@@ -1,4 +1,4 @@
-package uk.co.epii.spencerPerceval.util;
+package uk.co.epii.spencerperceval.util;
 
 import uk.co.epii.spencerperceval.util.Groupable;
 
