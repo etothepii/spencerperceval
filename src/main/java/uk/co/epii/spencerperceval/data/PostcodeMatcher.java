@@ -17,6 +17,10 @@ public class PostcodeMatcher {
     private Pattern postcodeMatcher;
     private Pattern postcodeFinder;
 
+    public PostcodeMatcher() {
+        init();
+    }
+
     public void setStandardizedPattern(String standardizedPattern) {
         this.standardizedPattern = standardizedPattern;
     }
