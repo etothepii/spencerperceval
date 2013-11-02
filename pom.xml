@@ -4,7 +4,7 @@
 
   <groupId>uk.co.epii.conservatives</groupId>
   <artifactId>spencerperceval</artifactId>
-  <version>0.0.3</version>
+  <version>0.0.4</version>
   <packaging>jar</packaging>
   
   <description>An utility package to contain all the utility classes and methods</description>
@@ -85,7 +85,7 @@
           <target>${java.target.version}</target>
         </configuration>
       </plugin>
-      <plugin>
+      <!--<plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
 	<version>${shade.version}</version>
@@ -113,7 +113,7 @@
             </configuration>
 	  </execution>
 	</executions>
-      </plugin>
+      </plugin>-->
     </plugins>
   </build>  
 
