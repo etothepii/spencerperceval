@@ -8,6 +8,12 @@ package uk.co.epii.spencerperceval.extensions;
 public class ArrayExtensions {
 
     public static int d(String[] a, String[] b) {
+        if (b == null) {
+          b = new String[a.length];
+          for (int i = 0; i < b.length; i++) {
+            b[i] = "NULL";
+          }
+        }
         if (a.length != b.length) {
             throw new IllegalArgumentException("Arrays should be the same length.");
         }
